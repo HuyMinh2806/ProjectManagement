@@ -1,0 +1,32 @@
+services:
+    mysql-client:
+        image: mysql:8.0-oracle
+        ports:
+            - "3307:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: admin123
+            MYSQL_DATABASE: project_management
+        volumes:
+          - mysql-data:/var/lib/mysql
+        networks:
+          - spring-boot-network
+
+    spring-boot:
+        build:
+          context: .
+          dockerfile: Dockerfile
+        ports:
+            - "8080:8080"
+        networks:
+          - spring-boot-network
+        environment:
+          SPRING_DATASOURCE_URL: jdbc:mysql://mysql-client:3306/project_management
+          SPRING_DATASOURCE_PASSWORD: admin123
+        depends_on:
+          - mysql-client
+
+volumes:
+  mysql-data:
+networks:
+  spring-boot-network:
+    driver: bridge

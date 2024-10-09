@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ProjectManagement
+  datasource:
+    url: "jdbc:mysql://mysql-client:3306/project_management"
+    driverClassName: "com.mysql.cj.jdbc.Driver"
+    username: root
+    password: admin123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: auzemon@gmail.com
+    password: kyklsjvpjjrrckgc
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true

@@ -1,0 +1,9 @@
+package org.demo.projectmanagement.Entity;
+
+/** @author Minh
+* Date: 10/3/2024
+* Time: 2:30 PM
+*/ 
+
+public class Commnet {
+}

@@ -1,0 +1,9 @@
+package org.demo.projectmanagement.Dto.Response;
+
+/** @author Minh
+* Date: 10/3/2024
+* Time: 8:22 PM
+*/ 
+
+public class MessageResponse {
+}

@@ -1,0 +1,9 @@
+package org.demo.projectmanagement.Service;
+
+/** @author Minh
+* Date: 10/3/2024
+* Time: 10:24 AM
+*/ 
+
+public class CustomeUserDetailsImpl {
+}
